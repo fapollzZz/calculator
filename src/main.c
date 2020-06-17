@@ -23,19 +23,19 @@ int main(int argc, char *argv[])
 
         switch(o){
             case '+':
-            sum(x, y);
+            r = sum(x, y);
             break;
 
             case '-':
-            sub(x, y);
+            r = sub(x, y);
             break;
 
             case '*':
-            mul(x, y);
+            r = mul(x, y);
             break;
 
             case '/':
-            del(x, y);
+            r = del(x, y);
             break;
         }
         printf("%f %c %f = %f\n",x, o, y, r);

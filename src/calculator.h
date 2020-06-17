@@ -6,5 +6,4 @@ float sub(float x, float y);
 float del(float x, float y);
 float mul(float x, float y);
 
-
 #endif

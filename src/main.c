@@ -1,51 +1,47 @@
-#include <stdio.h>
 #include "calculator.h"
+#include <stdio.h>
 // #include <clocale>
 // #include <cstdlib>
 // using namespace std;
 
-
-
-
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     // setlocale(LC_ALL,"russian");
     char ss;
 
-    do{
+    do {
         printf("Введите арифметическое действие: число,знак(/,+,-,*),число\n");
-        float x,y,r;
+        float x, y, r;
         char o;
 
         scanf("%f", &x);
         scanf("%s", &o);
         scanf("%f", &y);
 
-        switch(o){
-            case '+':
+        switch (o) {
+        case '+':
             r = sum(x, y);
             break;
 
-            case '-':
+        case '-':
             r = sub(x, y);
             break;
 
-            case '*':
+        case '*':
             r = mul(x, y);
             break;
 
-            case '/':
+        case '/':
             r = del(x, y);
             break;
         }
-        printf("%f %c %f = %f\n",x, o, y, r);
+        printf("%f %c %f = %f\n", x, o, y, r);
 
         printf("Продолжить?(y/n)");
 
         scanf("%s", &ss);
 
-    }   while(ss == 'y');
-
+    } while (ss == 'y');
 
     return 0;
 }
